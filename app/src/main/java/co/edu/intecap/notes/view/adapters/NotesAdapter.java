@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import co.edu.intecap.notes.R;
 import co.edu.intecap.notes.model.datamodels.Note;
-import co.edu.intecap.notes.view.viewmodels.NoteViewHolder;
 
 public class NotesAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 

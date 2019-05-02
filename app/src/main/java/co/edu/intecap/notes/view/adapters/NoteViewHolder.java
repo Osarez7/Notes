@@ -1,4 +1,4 @@
-package co.edu.intecap.notes.view.viewmodels;
+package co.edu.intecap.notes.view.adapters;
 
 import android.view.View;
 import android.widget.ImageView;

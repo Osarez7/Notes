@@ -1,6 +1,5 @@
 package co.edu.intecap.notes.view.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import co.edu.intecap.notes.R;
@@ -13,7 +12,7 @@ import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private RecyclerView rvNotes;
     private FloatingActionButton fabAddNote;
@@ -23,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        setupToolbar();
+        setToolbarTitle(R.string.app_name);
         rvNotes = findViewById(R.id.rv_notes);
         fabAddNote = findViewById(R.id.btn_add_note);
         fabAddNote.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setupNoteList();
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -45,9 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupNoteList() {
         rvNotes.setLayoutManager(new LinearLayoutManager(this));
-
         adapter =  new NotesAdapter();
         adapter.setNoteList(NotesRepository.NOTES_LIST);
         rvNotes.setAdapter(adapter);
     }
+
+    protected void setupToolbar() {
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.app_name);
+        setSupportActionBar(toolbar);
+    }
+
 }
