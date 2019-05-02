@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="10dp"
+    android:layout_marginBottom="8dp"
     app:cardBackgroundColor="@android:color/white"
     app:cardElevation="2dp"
     app:cardUseCompatPadding="true"
@@ -15,11 +15,13 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/txt_note_name"
+            android:id="@+id/txt_note_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/date/day_of_week" />
@@ -34,7 +36,7 @@
             android:textAlignment="viewStart"
             app:layout_constraintEnd_toStartOf="@+id/iv_note"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_note_name"
+            app:layout_constraintTop_toBottomOf="@+id/txt_note_title"
             tools:text="@tools:sample/lorem/random" />
 
         <ImageView

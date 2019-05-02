@@ -8,10 +8,7 @@ import co.edu.intecap.notes.R;
 public class BaseActivity extends AppCompatActivity {
     protected Toolbar toolbar;
 
-
-
     protected void setToolbarTitle(int title) {
         getSupportActionBar().setTitle(title);
     }
-
 }
